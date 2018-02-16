@@ -1,0 +1,28 @@
+<div ng-init="init()">
+  </br>
+  </br>
+
+  <strong>
+    <h2 class="center"> User List </h2>
+  </strong>
+  <hr>
+
+  <div class="alert alert-success" ng-if="showalert">
+    <alert dismiss-on-timeout="2000">{{successmsg}}</alert>
+  </div>
+
+  <table class="table table-striped">
+    <tr>
+      <td>Username</td>
+      <td>Email</td>
+      <td>Password
+    </tr>
+    <tr ng-repeat="user in userdata" ng-click="updatefun(user._id)">
+      <td> {{user.username}} {{user.lastname}} </td>
+      <td>
+        {{user.email}}
+      </td>
+      <td> {{user.password}} </td>
+    </tr>
+  </table>
+</div>
